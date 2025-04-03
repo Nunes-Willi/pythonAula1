@@ -46,8 +46,8 @@ import math
 # elif nota1 < 0 or nota2 < 0 or nota3 < 0:
 #     print ("ERROR: Notas menores que o permitido(Min 0)")
 # elif media >= 6:
-#     print("Média:",round(media, 2), "Você PASSOU")
-# else: print("Média:",round(media, 2),"Você REPROVOU")
+#     print(f"\033[32m {f'Média:{round(media, 2)}, Você PASSOU'}")
+# else: print(f"\033[31m{f'Média: {round(media, 2)}, Você REPROVOU'}")
 
 #TODO 06
 
@@ -102,9 +102,70 @@ import math
 
 #TODO 11
 
-salarioMin = float(input("Valor do Salário Minimo: "))
+# salarioMin = float(input("Valor do Salário Minimo: "))
 
-casaPrice = salarioMin * 90
-qtdCasas = (1*10**9)  / casaPrice
+# casaPrice = salarioMin * 90
+# qtdCasas = (1*10**9)  / casaPrice
 
-print(f"Podem ser construidas {round(qtdCasas)} com 1B R$")
+# print(f"Podem ser construidas {round(qtdCasas)} com 1B R$")
+
+#TODO 12
+
+# salarioBruto = float(input("Coloque seu salário: "))
+# ir = salarioBruto * 15 / 100
+# inss = salarioBruto * 11 / 100
+# sindicato = salarioBruto * 3 / 100
+
+# salarioLiquido = salarioBruto - ir - inss - sindicato
+# print (f"IR = {round(ir, 2)} R$; \n INSS {round(inss, 2)} R$; \n Sindicato {round(sindicato, 2)} R$; \n O seu salário liquido é {round(salarioLiquido, 2)} R$;")
+
+#TODO 13
+
+# distanciaKm = float(input("Distância até a casa da irmã: "))
+# consumoPorKm = float(input("Consumo do veículo de Maria por Km: "))
+# precoGasolina = float(input("Preço do litro da Gasolina: "))
+
+# if precoGasolina == None:
+#     precoGasolina = 6.32
+# else:
+# qtdLitros = distanciaKm / consumoPorKm
+# pagarGasolina = qtdLitros * precoGasolina
+
+# print(f"Vai ser necessário {round(qtdLitros, 2)} litros que dará {round(pagarGasolina, 2)} R$")
+
+#TODO 14
+
+# disLadoA = float(input("Quantia de metros do Lado A: "))
+# disLadoB = float(input("Quantia de metros do Lado B: "))
+# disLadoC = float(input("Quantia de metros do Lado C: "))
+# disLadoD = float(input("Quantia de metros do Lado D: "))
+# mourao = float(input("Preço do mourão: "))
+# cercaMetro = float(input("Preço do metro do arame: "))
+
+# metrosTerreno = disLadoA + disLadoB + disLadoC + disLadoD
+# qtdMourao = metrosTerreno / 3
+
+# precoMourao = qtdMourao * mourao
+# precoArame = cercaMetro * metrosTerreno * 4
+# precoTotal = precoMourao + precoArame
+
+# print(f"Vai ser preciso {round(qtdMourao)} mourão, o preço total vai ser de {round(precoTotal, 2)} R$, sendo {precoMourao} R$ do mourão e {precoArame} R$ do arame")
+
+
+#TODO 15
+
+# precoAuto = input("Preço do automóvel")
+modelo = input("Modelo do automóvel: ")
+marca = input ("Marca do automóvel: ")
+ano = int(input("Ano do automóvel: "))
+kmInicial = float(input("Kilometragem inicial:"))
+kmFinal = float(input("Kilometragem final:"))
+litroConsumido = float(input("Litros consumidos pelo automóvel: "))
+precoLitro = float(input("Preço por litro: "))
+
+pagarLitro = litroConsumido * precoLitro
+distanciaPerc = (kmFinal - kmInicial)
+kmLitro = kmFinal / litroConsumido
+# totalPagar = pagarLitro + precoAuto
+
+print(f"Modelo: {modelo}, Marca: {marca}, Ano: {ano}; \n Distância percorrida: {distanciaPerc}; \n Litros de combustivel consumidos: {litroConsumido}; \n Preço por litro: {precoLitro}; \n Total a Pagar: {pagarLitro}; \n Km por litro: {round(kmLitro, 2)}")
