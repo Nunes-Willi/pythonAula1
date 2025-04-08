@@ -131,7 +131,7 @@ import math
 # qtdLitros = distanciaKm / consumoPorKm
 # pagarGasolina = qtdLitros * precoGasolina
 
-# print(f"Vai ser necessário {round(qtdLitros, 2)} litros que dará {round(pagarGasolina, 2)} R$")
+# print(f"Vai ser necessário {qtdLitros:,.2f} litros que dará {pagarGasolina:,.2f} R$")
 
 #TODO 14
 
@@ -149,23 +149,21 @@ import math
 # precoArame = cercaMetro * metrosTerreno * 4
 # precoTotal = precoMourao + precoArame
 
-# print(f"Vai ser preciso {round(qtdMourao)} mourão, o preço total vai ser de {round(precoTotal, 2)} R$, sendo {precoMourao} R$ do mourão e {precoArame} R$ do arame")
+# print(f"Vai ser preciso {round(qtdMourao)} mourão, o preço total vai ser de {precoTotal:,.2f} R$, sendo {precoMourao:,.2f} R$ do mourão e {precoArame:,.2f} R$ do arame")
 
 
 #TODO 15
 
-# precoAuto = input("Preço do automóvel")
-modelo = input("Modelo do automóvel: ")
-marca = input ("Marca do automóvel: ")
-ano = int(input("Ano do automóvel: "))
-kmInicial = float(input("Kilometragem inicial:"))
-kmFinal = float(input("Kilometragem final:"))
-litroConsumido = float(input("Litros consumidos pelo automóvel: "))
-precoLitro = float(input("Preço por litro: "))
+# modelo = input("Modelo do automóvel: ")
+# marca = input ("Marca do automóvel: ")
+# ano = int(input("Ano do automóvel: "))
+# kmInicial = float(input("Kilometragem inicial:"))
+# kmFinal = float(input("Kilometragem final:"))
+# litroConsumido = float(input("Litros consumidos pelo automóvel: "))
+# precoLitro = float(input("Preço por litro: "))
 
-pagarLitro = litroConsumido * precoLitro
-distanciaPerc = (kmFinal - kmInicial)
-kmLitro = kmFinal / litroConsumido
-# totalPagar = pagarLitro + precoAuto
+# pagarLitro = litroConsumido * precoLitro
+# distanciaPerc = (kmFinal - kmInicial)
+# kmLitro = distanciaPerc / litroConsumido
 
-print(f"Modelo: {modelo}, Marca: {marca}, Ano: {ano}; \n Distância percorrida: {distanciaPerc}; \n Litros de combustivel consumidos: {litroConsumido}; \n Preço por litro: {precoLitro}; \n Total a Pagar: {pagarLitro}; \n Km por litro: {round(kmLitro, 2)}")
+# print(f"Modelo: {modelo}, Marca: {marca}, Ano: {ano}; \n Distância percorrida: {distanciaPerc}; \n Litros de combustivel consumidos: {litroConsumido}; \n Preço por litro: {precoLitro}; \n Total a Pagar: {pagarLitro:,.2f}; \n Km por litro: {kmLitro:.2f}")
